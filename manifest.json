@@ -20,25 +20,25 @@
   "commands": {
     "loadRaiNewsUrl": {
       "suggested_key": {
-        "default": "Ctrl+Shift+1"
+        "default": "Alt+Shift+1"
       },
       "description": "Rai News 24"
     },
     "loadTV2000Url": {
       "suggested_key": {
-        "default": "Ctrl+Shift+2"
+        "default": "Alt+Shift+2"
       },
       "description": "TV2000"
     },
     "loadMediasetItaliaUrl": {
       "suggested_key": {
-        "default": "Ctrl+Shift+3"
+        "default": "Alt+Shift+3"
       },
       "description": "Mediaset Italia"
     },
     "loadLa7Url": {
       "suggested_key": {
-        "default": "Ctrl+Shift+4"
+        "default": "Alt+Shift+4"
       },
       "description": "La7"
     }
