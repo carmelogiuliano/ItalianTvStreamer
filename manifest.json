@@ -1,10 +1,28 @@
 {
-  "name": "My Extension",
-  "description": "Base Level Extension",
-  "version": "1.0",
   "manifest_version": 3,
+  "name": "Hotkey Loader",
+  "version": "1.0",
+  "description": "Load URLs with hotkeys",
   "action": {
-    "default_popup": "index.html",
-    "default_icon": "image.png"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "loadUrl": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1"
+      },
+      "description": "Load URL"
+    }
   }
 }
