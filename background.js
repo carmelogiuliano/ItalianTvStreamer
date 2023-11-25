@@ -3,19 +3,25 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.commands.onCommand.addListener(function(command) {
-  if (command === 'loadUrl') {
+  if (command === 'loadRaiNewsUrl') {
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-      chrome.tabs.update(tabs[0].id, { url: 'https://example.com/new-url' });
+      chrome.tabs.update(tabs[0].id, { url: 'https://www.raiplay.it/dirette/rainews24' });
+    });
+  }
+  else if (command === 'loadTV2000Url') {
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+      chrome.tabs.update(tabs[0].id, { url: 'https://www.tv2000.it/live/' });
+    });
+  }
+  else if (command === 'loadMediasetItaliaUrl') {
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+      chrome.tabs.update(tabs[0].id, { url: 'https://mediasetinfinity.mediaset.it/diretta/mediaset-international_cMG' });
+    });
+  }
+  else if (command === 'loadLa7Url') {
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+      chrome.tabs.update(tabs[0].id, { url: 'https://www.la7.it/dirette-tv' });
     });
   }
 });
 
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-    if (request.action === 'loadUrl') {
-      chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-        chrome.tabs.update(tabs[0].id, { url: request.url });
-      });
-    }
-  }
-);
